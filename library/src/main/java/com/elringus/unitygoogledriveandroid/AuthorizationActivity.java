@@ -21,8 +21,7 @@ public class AuthorizationActivity extends Activity {
     private static OnAuthorizationResponseListener responseListener;
     private AuthorizationService authorizationService;
 
-    public static void SetResponseListener (OnAuthorizationResponseListener responseListener)
-    {
+    public static void SetResponseListener (OnAuthorizationResponseListener responseListener) {
         AuthorizationActivity.responseListener = responseListener;
     }
 
@@ -75,7 +74,8 @@ public class AuthorizationActivity extends Activity {
     protected void onDestroy() {
         super.onDestroy();
 
-        responseListener = null;
+        //responseListener = null;
+        
         if (authorizationService != null) authorizationService.dispose();
     }
 }
